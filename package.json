@@ -1,0 +1,28 @@
+{
+  "name": "@viapolaris/heartcut",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Heartcut — brief → script → consistent character/location sheets → scene prompts → Seedance clips → export. An engine and dashboard for short emotional AI films.",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "bin": {
+    "heartcut": "./src/cli.ts"
+  },
+  "scripts": {
+    "start": "node src/server.ts",
+    "doctor": "node src/cli.ts doctor",
+    "serve": "node src/server.ts",
+    "dev": "node --watch src/server.ts",
+    "cli": "node src/cli.ts",
+    "fake": "node src/server.ts --fake",
+    "demo": "node src/cli.ts demo --fake",
+    "test": "node scripts/run.mjs HEARTCUT_FAKE=1 HEARTCUT_PREFER_LOCAL=0 --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "typescript": "^5.9.0"
+  }
+}

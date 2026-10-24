@@ -1,0 +1,35 @@
+name: Feature request
+description: Suggest a change or a new feature.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Never paste an API key or a `.env` file here.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you would like
+      description: How it could work. Plain words are fine.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options: [Setup, Brief, Script, Sheets, Images, Scenes, Keyframes, Clips, Export, Providers, Other]
+  - type: textarea
+    id: cost
+    attributes:
+      label: Cost
+      description: Does it make paid calls? About how much per film?
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else

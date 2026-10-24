@@ -1,0 +1,77 @@
+name: Bug report
+description: Something does not work as described.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. **Never paste an API key**, a `.env` file, or a log that contains one. If you pasted a key by mistake, revoke it with the provider now.
+        For a security problem, do not open an issue. Use "Report a vulnerability" on the Security tab instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start with `npm start`
+        2. Open the Images step
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options: [Setup, Brief, Script, Sheets, Images, Scenes, Keyframes, Clips, Export, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `npm run doctor`
+      description: It names the keys it finds but never prints their values. Check before you paste anyway.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 15, Ubuntu 24.04, Windows 11
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      description: Output of `node --version`.
+    validations:
+      required: true
+  - type: input
+    id: llm
+    attributes:
+      label: Language model provider and model
+      placeholder: claude CLI, Ollama qwen3-vl, OpenAI ...
+  - type: dropdown
+    id: gen
+    attributes:
+      label: Picture and video provider
+      options: [Higgsfield, fal, Replicate, Local, Fake mode, Not set up]
+  - type: checkboxes
+    id: fake
+    attributes:
+      label: Fake mode
+      options:
+        - label: It also happens with `HEARTCUT_FAKE=1`.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove any key or private path before pasting.
+      render: text

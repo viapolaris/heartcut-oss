@@ -1,0 +1,8 @@
+# Heartcut local picture worker (tools/local-image.py). Apple Silicon Mac only (MLX), Python 3.10 to 3.12.
+# With uv you do not need this file: `uv run tools/local-image.py` reads the same pin from the script header.
+# Without uv:  python3.12 -m venv .venv && .venv/bin/pip install -r tools/requirements-local.txt
+#              then set HEARTCUT_LOCAL_PYTHON=.venv/bin/python in .env
+# The worker imports only mflux; mflux pulls in mlx, torch, transformers and the rest.
+# Versions are the ones this worker was last run with (2026-10-11).
+mflux==0.22.0
+mlx==0.32.3

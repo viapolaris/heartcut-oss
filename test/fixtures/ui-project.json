@@ -1,0 +1,1417 @@
+{
+  "id": "prj_ui000001",
+  "slug": "orchard-ui",
+  "title": "Fenna",
+  "owner": "viaPolaris",
+  "aspect": "16:9",
+  "createdAt": "2026-10-10T18:00:00.000Z",
+  "updatedAt": "2026-10-10T18:00:00.000Z",
+  "brief": {
+    "text": "An old orchard keeper goes out to the stable on a frozen morning. Her pony is very old now and the vet is coming. She kneels in the straw and rolls one red apple to the mare. We cut on the same apple lying in summer grass forty years earlier, the pony young, the woman young. It ends on the hill at dusk, the two of them sharing apple slices by the wall.",
+    "refs": [
+      {
+        "id": "ref_selfie01",
+        "role": "selfie",
+        "path": "{{MEDIA}}/../refs/selfie.png",
+        "note": "my face for Ilse"
+      },
+      {
+        "id": "ref_mood01",
+        "role": "mood",
+        "path": "{{MEDIA}}/../refs/mood.png",
+        "note": "frost on a stable window"
+      }
+    ]
+  },
+  "script": {
+    "logline": "On the morning the vet is due, an old orchard keeper rolls one last apple to her old pony, and the apple carries us back to the summer they were both young.",
+    "emotionalCore": "She kneels in the straw and rolls a red apple to the mare: the small daily gift, offered one more time.",
+    "arc": "A frozen stable and a goodbye she cannot say. She rolls an apple across the boards. A match cut on the apple opens a summer orchard where both are young. It ends quietly on the hill at dusk.",
+    "characters": [
+      {
+        "id": "ilse",
+        "name": "Ilse",
+        "species": "human",
+        "baseDescription": "a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin",
+        "wardrobe": "mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm",
+        "states": [
+          {
+            "id": "present",
+            "label": "present day, worn out",
+            "description": "tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner"
+          },
+          {
+            "id": "past",
+            "label": "flashback, young summer",
+            "description": "rested and clean, the cardigan new with bright unfaded wool, a wide unguarded smile"
+          }
+        ]
+      },
+      {
+        "id": "fenna",
+        "name": "Fenna",
+        "species": "animal",
+        "baseDescription": "a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear",
+        "wardrobe": "worn red leather halter with a brass nameplate, plaited blue wool browband",
+        "states": [
+          {
+            "id": "present",
+            "label": "present day, very old",
+            "description": "old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat"
+          },
+          {
+            "id": "past",
+            "label": "flashback, young",
+            "description": "young and strong, a glossy dappled coat, both eyes clear and dark, alert ears"
+          }
+        ]
+      }
+    ],
+    "locations": [
+      {
+        "id": "barn",
+        "name": "Winter stable",
+        "description": "an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+        "lighting": "thin blue dawn light through the frosted window, breath visible in the cold air",
+        "cameraPackage": "cinema camera, 35mm, T1.8, gentle handheld sway",
+        "palette": "cold slate blue, pale straw gold"
+      },
+      {
+        "id": "hill",
+        "name": "Hilltop wall",
+        "description": "a dry-stone wall along the top of a grassy hill, one old pear tree leaning over it, the valley below",
+        "lighting": "dusk after sunset, soft peach and lavender sky, low even light",
+        "cameraPackage": "cinema camera, 50mm, T2, locked off",
+        "palette": "peach, lavender, muted sage"
+      },
+      {
+        "id": "orchard",
+        "name": "Summer orchard",
+        "description": "rows of old apple trees in long uncut grass, fallen apples, a wooden ladder against a trunk",
+        "lighting": "high summer sun through the leaves, dappled light on the grass",
+        "cameraPackage": "cinema camera, 40mm, T2.8, slow push",
+        "palette": "deep green, apple red, honey yellow"
+      },
+      {
+        "id": "cottage",
+        "name": "Cottage kitchen",
+        "description": "a low farmhouse kitchen, a scrubbed pine table, a bowl of red apples, a halter hanging by the door",
+        "lighting": "warm lamp light against a dark blue window before dawn",
+        "cameraPackage": "cinema camera, 35mm, T2, handheld",
+        "palette": "warm amber, dark blue, scrubbed pine"
+      }
+    ],
+    "scenes": [
+      {
+        "id": "s1",
+        "order": 1,
+        "title": "The stable door",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "barn",
+        "cameraSimple": "static wide, no movement",
+        "actionSimple": "Ilse stands in the stable door at dawn holding the halter rope, her breath misting",
+        "mood": "grief held in",
+        "durationSec": 6
+      },
+      {
+        "id": "s2",
+        "order": 2,
+        "title": "The mare in her stall",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "barn",
+        "cameraSimple": "slow handheld, over the shoulder",
+        "actionSimple": "the old mare shifts her weight off the bad leg, ears flicking toward the door",
+        "mood": "tender and uneasy",
+        "durationSec": 5
+      },
+      {
+        "id": "s3",
+        "order": 3,
+        "title": "An old pony breathing",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "barn",
+        "cameraSimple": "medium close, shallow focus",
+        "actionSimple": "Fenna lowers her head and lets out one slow breath through her nose",
+        "mood": "calm, tired",
+        "durationSec": 6
+      },
+      {
+        "id": "s4",
+        "order": 4,
+        "title": "One apple",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "barn",
+        "cameraSimple": "static medium, no camera movement",
+        "actionSimple": "she kneels in the straw, takes a red apple from her pocket and rolls it toward the mare",
+        "mood": "the emotional center",
+        "durationSec": 8
+      },
+      {
+        "id": "s5",
+        "order": 5,
+        "title": "The apple stops",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "barn",
+        "cameraSimple": "extreme close on the apple",
+        "actionSimple": "the apple wobbles through the straw and stops against her front hoof",
+        "mood": "everything waits",
+        "durationSec": 4
+      },
+      {
+        "id": "s6",
+        "order": 6,
+        "title": "The same apple in summer",
+        "era": "past",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "past"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "past"
+          }
+        ],
+        "locationId": "orchard",
+        "cameraSimple": "locked off, low angle",
+        "actionSimple": "the same apple lies in long grass, the young mare drops her head and takes it",
+        "mood": "summer all at once",
+        "durationSec": 6,
+        "matchCutFrom": "s5"
+      },
+      {
+        "id": "s7",
+        "order": 7,
+        "title": "The basket goes over",
+        "era": "past",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "past"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "past"
+          }
+        ],
+        "locationId": "orchard",
+        "cameraSimple": "close, handheld",
+        "actionSimple": "the young mare nudges the basket over, young Ilse falls back in the grass laughing",
+        "mood": "easy joy",
+        "durationSec": 5
+      },
+      {
+        "id": "s8",
+        "order": 8,
+        "title": "Up the hill",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "hill",
+        "cameraSimple": "slow push-in",
+        "actionSimple": "old Ilse leads old Fenna up to the wall, one hand on her neck, the light going",
+        "mood": "release",
+        "durationSec": 8
+      },
+      {
+        "id": "s9",
+        "order": 9,
+        "title": "Last light",
+        "era": "present",
+        "characters": [
+          {
+            "characterId": "ilse",
+            "stateId": "present"
+          },
+          {
+            "characterId": "fenna",
+            "stateId": "present"
+          }
+        ],
+        "locationId": "hill",
+        "cameraSimple": "wide static, silhouette",
+        "actionSimple": "two shapes by the pear tree, she holds out an apple slice, the mare takes it gently",
+        "mood": "peace",
+        "durationSec": 7
+      }
+    ],
+    "inspiration": "A small story about an old animal and the person who loves it: soft light, one ordinary object carrying the cut between two eras."
+  },
+  "sheets": {
+    "items": [
+      {
+        "id": "ilse_present_full",
+        "kind": "character-full",
+        "characterId": "ilse",
+        "stateId": "present",
+        "prompt": "Full-body character sheet, woman 71, 163 cm, mustard cardigan and faded blue headscarf, chapped red hands, white seamless cyclorama, even octabox light, 85mm, same face same props.",
+        "dependsOn": "ilse_present_portrait"
+      },
+      {
+        "id": "ilse_past_full",
+        "kind": "character-full",
+        "characterId": "ilse",
+        "stateId": "past",
+        "prompt": "Full-body character sheet, the same woman young, new bright cardigan, wide smile, wicker basket, white seamless cyclorama, even octabox light, same face same props.",
+        "dependsOn": "ilse_present_portrait"
+      },
+      {
+        "id": "fenna_present_full",
+        "kind": "character-full",
+        "characterId": "fenna",
+        "stateId": "present",
+        "prompt": "Full-body sheet, old dapple-grey pony mare, sagging back, cloudy left eye, red leather halter with brass nameplate, white seamless cyclorama, even octabox light, same animal same halter."
+      },
+      {
+        "id": "fenna_past_full",
+        "kind": "character-full",
+        "characterId": "fenna",
+        "stateId": "past",
+        "prompt": "Full-body sheet, young dapple-grey pony mare, glossy coat, white star on the forehead, red leather halter, white seamless cyclorama, even light.",
+        "dependsOn": "fenna_present_full"
+      },
+      {
+        "id": "ilse_present_portrait",
+        "kind": "character-portrait",
+        "characterId": "ilse",
+        "stateId": "present",
+        "prompt": "Portrait, woman 71, small white scar across the chin, long white plait, pale grey-green eyes, 85mm T1.8, soft key, seamless backdrop."
+      },
+      {
+        "id": "loc_barn",
+        "kind": "location",
+        "locationId": "barn",
+        "prompt": "Old timber stable at dawn, straw over worn floorboards, frost on the window, breath in the cold air, 35mm cinema look."
+      },
+      {
+        "id": "loc_hill",
+        "kind": "location",
+        "locationId": "hill",
+        "prompt": "Dry-stone wall on a grassy hilltop at dusk, an old pear tree, the valley in mist below, 50mm cinema look."
+      },
+      {
+        "id": "loc_orchard",
+        "kind": "location",
+        "locationId": "orchard",
+        "prompt": "Summer orchard, old apple trees in long grass, fallen apples, a ladder against a trunk, dappled sun, 40mm cinema look."
+      },
+      {
+        "id": "loc_cottage",
+        "kind": "location",
+        "locationId": "cottage",
+        "prompt": "Low farmhouse kitchen before dawn, scrubbed pine table, a bowl of red apples, warm lamp light, 35mm cinema look."
+      },
+      {
+        "id": "ilse_past_portrait",
+        "kind": "character-portrait",
+        "characterId": "ilse",
+        "stateId": "past",
+        "dependsOn": "ilse_present_portrait",
+        "prompt": "[anchor: ilse_present_portrait] the same character as the reference image, same face, same hair, same markings, close-up portrait, head and shoulders, younger, rested face, white seamless background, soft even light."
+      }
+    ]
+  },
+  "assets": [
+    {
+      "id": "ilse_present_full",
+      "kind": "character-full",
+      "characterId": "ilse",
+      "stateId": "present",
+      "prompt": "Full-body character sheet, woman 71, 163 cm, mustard cardigan and faded blue headscarf, chapped red hands, white seamless cyclorama, even octabox light, 85mm, same face same props.",
+      "model": "higgsfield-ai/soul/v2/standard",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_full_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_full_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_full_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_full_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 0,
+      "jobId": "job_img0",
+      "costUsd": 0.023,
+      "anchorIndex": 0
+    },
+    {
+      "id": "ilse_past_full",
+      "kind": "character-full",
+      "characterId": "ilse",
+      "stateId": "past",
+      "prompt": "Full-body character sheet, the same woman young, new bright cardigan, wide smile, wicker basket, white seamless cyclorama, even octabox light, same face same props.",
+      "model": "higgsfield-ai/soul/v2/standard",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_past_full_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_past_full_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_past_full_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_past_full_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 1,
+      "jobId": "job_img1",
+      "costUsd": 0.023,
+      "anchorIndex": 2
+    },
+    {
+      "id": "fenna_present_full",
+      "kind": "character-full",
+      "characterId": "fenna",
+      "stateId": "present",
+      "prompt": "Full-body sheet, old dapple-grey pony mare, sagging back, cloudy left eye, red leather halter with brass nameplate, white seamless cyclorama, even octabox light, same animal same halter.",
+      "model": "higgsfield-ai/soul/v2/standard",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_present_full_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_present_full_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_present_full_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_present_full_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 2,
+      "jobId": "job_img2",
+      "costUsd": 0.023
+    },
+    {
+      "id": "fenna_past_full",
+      "kind": "character-full",
+      "characterId": "fenna",
+      "stateId": "past",
+      "prompt": "Full-body sheet, young dapple-grey pony mare, glossy coat, white star on the forehead, red leather halter, white seamless cyclorama, even light.",
+      "model": "higgsfield-ai/soul/v2/standard",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_past_full_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_past_full_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_past_full_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/fenna_past_full_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 3,
+      "jobId": "job_img3",
+      "costUsd": 0.023,
+      "anchorIndex": 2
+    },
+    {
+      "id": "ilse_present_portrait",
+      "kind": "character-portrait",
+      "characterId": "ilse",
+      "stateId": "present",
+      "prompt": "Portrait, woman 71, small white scar across the chin, long white plait, pale grey-green eyes, 85mm T1.8, soft key, seamless backdrop.",
+      "model": "higgsfield-ai/soul/v2/standard",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_portrait_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_portrait_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_portrait_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/ilse_present_portrait_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 0,
+      "jobId": "job_img4",
+      "costUsd": 0.023
+    },
+    {
+      "id": "loc_barn",
+      "kind": "location",
+      "locationId": "barn",
+      "prompt": "Old timber stable at dawn, straw over worn floorboards, frost on the window, breath in the cold air, 35mm cinema look.",
+      "model": "higgsfield-ai/soul/cinema",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_barn_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_barn_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_barn_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_barn_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 1,
+      "jobId": "job_img5",
+      "costUsd": 0.016
+    },
+    {
+      "id": "loc_hill",
+      "kind": "location",
+      "locationId": "hill",
+      "prompt": "Dry-stone wall on a grassy hilltop at dusk, an old pear tree, the valley in mist below, 50mm cinema look.",
+      "model": "higgsfield-ai/soul/cinema",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_hill_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_hill_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_hill_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_hill_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "chosen": 2,
+      "jobId": "job_img6",
+      "costUsd": 0.016
+    },
+    {
+      "id": "loc_orchard",
+      "kind": "location",
+      "locationId": "orchard",
+      "prompt": "Summer orchard, old apple trees in long grass, fallen apples, a ladder against a trunk, dappled sun, 40mm cinema look.",
+      "model": "higgsfield-ai/soul/cinema",
+      "options": [
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_orchard_0.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_orchard_1.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_orchard_2.png",
+          "width": 512,
+          "height": 512
+        },
+        {
+          "path": "{{MEDIA}}/orchard-ui/assets/loc_orchard_3.png",
+          "width": 512,
+          "height": 512
+        }
+      ],
+      "jobId": "job_img7",
+      "costUsd": 0.016
+    }
+  ],
+  "scenePrompts": [
+    {
+      "sceneId": "s1",
+      "prompt": "static wide, no movement, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, Ilse stands in the stable door at dawn holding the halter rope, her breath misting, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it, thin blue dawn light through the frosted window, breath visible in the cold air, cold slate blue, pale straw gold, soft grade, fine grain, cinema camera, 35mm, T1.8, gentle handheld sway, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_barn"
+      ],
+      "durationSec": 6,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "static wide, no movement"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "Ilse stands in the stable door at dawn holding the halter rope, her breath misting, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "thin blue dawn light through the frosted window, breath visible in the cold air",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "cold slate blue, pale straw gold, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 35mm, T1.8, gentle handheld sway"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s2",
+      "prompt": "slow handheld, over the shoulder, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, the old mare shifts her weight off the bad leg, ears flicking toward the door, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it, thin blue dawn light through the frosted window, breath visible in the cold air, cold slate blue, pale straw gold, soft grade, fine grain, cinema camera, 35mm, T1.8, gentle handheld sway, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_barn"
+      ],
+      "durationSec": 5,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "slow handheld, over the shoulder"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "the old mare shifts her weight off the bad leg, ears flicking toward the door, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "thin blue dawn light through the frosted window, breath visible in the cold air",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "cold slate blue, pale straw gold, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 35mm, T1.8, gentle handheld sway"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s3",
+      "prompt": "medium close, shallow focus, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, Fenna lowers her head and lets out one slow breath through her nose, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it, thin blue dawn light through the frosted window, breath visible in the cold air, cold slate blue, pale straw gold, soft grade, fine grain, cinema camera, 35mm, T1.8, gentle handheld sway, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_barn"
+      ],
+      "durationSec": 6,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "medium close, shallow focus"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "Fenna lowers her head and lets out one slow breath through her nose, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "thin blue dawn light through the frosted window, breath visible in the cold air",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "cold slate blue, pale straw gold, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 35mm, T1.8, gentle handheld sway"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s4",
+      "prompt": "static medium, no camera movement, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, she kneels in the straw, takes a red apple from her pocket and rolls it toward the mare, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it, thin blue dawn light through the frosted window, breath visible in the cold air, cold slate blue, pale straw gold, soft grade, fine grain, cinema camera, 35mm, T1.8, gentle handheld sway, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_barn"
+      ],
+      "durationSec": 8,
+      "aspect": "16:9",
+      "audio": true,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "static medium, no camera movement"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "she kneels in the straw, takes a red apple from her pocket and rolls it toward the mare, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "thin blue dawn light through the frosted window, breath visible in the cold air",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "cold slate blue, pale straw gold, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 35mm, T1.8, gentle handheld sway"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s5",
+      "prompt": "extreme close on the apple, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, the apple wobbles through the straw and stops against her front hoof, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it, thin blue dawn light through the frosted window, breath visible in the cold air, cold slate blue, pale straw gold, soft grade, fine grain, cinema camera, 35mm, T1.8, gentle handheld sway, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_barn"
+      ],
+      "durationSec": 4,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "extreme close on the apple"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "the apple wobbles through the straw and stops against her front hoof, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Winter stable: an old timber stable at dawn, loose straw over worn floorboards, frost on the small window, a stall door with FENNA painted on it",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "thin blue dawn light through the frosted window, breath visible in the cold air",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "cold slate blue, pale straw gold, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 35mm, T1.8, gentle handheld sway"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s6",
+      "prompt": "locked off, low angle, Ilse (flashback, young summer) and Fenna (flashback, young), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; rested and clean, the cardigan new with bright unfaded wool, a wide unguarded smile; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; young and strong, a glossy dappled coat, both eyes clear and dark, alert ears, the same apple lies in long grass, the young mare drops her head and takes it, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Summer orchard: rows of old apple trees in long uncut grass, fallen apples, a wooden ladder against a trunk, high summer sun through the leaves, dappled light on the grass, deep green, apple red, honey yellow, soft grade, fine grain, cinema camera, 40mm, T2.8, slow push, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_past_full",
+        "fenna_past_full",
+        "loc_orchard"
+      ],
+      "durationSec": 6,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "locked off, low angle"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (flashback, young summer) and Fenna (flashback, young)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; rested and clean, the cardigan new with bright unfaded wool, a wide unguarded smile; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; young and strong, a glossy dappled coat, both eyes clear and dark, alert ears",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "the same apple lies in long grass, the young mare drops her head and takes it, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Summer orchard: rows of old apple trees in long uncut grass, fallen apples, a wooden ladder against a trunk",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "high summer sun through the leaves, dappled light on the grass",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "deep green, apple red, honey yellow, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 40mm, T2.8, slow push"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s7",
+      "prompt": "close, handheld, Ilse (flashback, young summer) and Fenna (flashback, young), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; rested and clean, the cardigan new with bright unfaded wool, a wide unguarded smile; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; young and strong, a glossy dappled coat, both eyes clear and dark, alert ears, the young mare nudges the basket over, young Ilse falls back in the grass laughing, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Summer orchard: rows of old apple trees in long uncut grass, fallen apples, a wooden ladder against a trunk, high summer sun through the leaves, dappled light on the grass, deep green, apple red, honey yellow, soft grade, fine grain, cinema camera, 40mm, T2.8, slow push, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_past_full",
+        "fenna_past_full",
+        "loc_orchard"
+      ],
+      "durationSec": 5,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "close, handheld"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (flashback, young summer) and Fenna (flashback, young)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; rested and clean, the cardigan new with bright unfaded wool, a wide unguarded smile; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; young and strong, a glossy dappled coat, both eyes clear and dark, alert ears",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "the young mare nudges the basket over, young Ilse falls back in the grass laughing, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Summer orchard: rows of old apple trees in long uncut grass, fallen apples, a wooden ladder against a trunk",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "high summer sun through the leaves, dappled light on the grass",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "deep green, apple red, honey yellow, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 40mm, T2.8, slow push"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s8",
+      "prompt": "slow push-in, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, old Ilse leads old Fenna up to the wall, one hand on her neck, the light going, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Hilltop wall: a dry-stone wall along the top of a grassy hill, one old pear tree leaning over it, the valley below, dusk after sunset, soft peach and lavender sky, low even light, peach, lavender, muted sage, soft grade, fine grain, cinema camera, 50mm, T2, locked off, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_hill"
+      ],
+      "durationSec": 8,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "slow push-in"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "old Ilse leads old Fenna up to the wall, one hand on her neck, the light going, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Hilltop wall: a dry-stone wall along the top of a grassy hill, one old pear tree leaning over it, the valley below",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "dusk after sunset, soft peach and lavender sky, low even light",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "peach, lavender, muted sage, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 50mm, T2, locked off"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    },
+    {
+      "sceneId": "s9",
+      "prompt": "wide static, silhouette, Ilse (present day, worn out) and Fenna (present day, very old), Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat, two shapes by the pear tree, she holds out an apple slice, the mare takes it gently, natural micro-expressions, restrained, straw and dust drifting through the light, wool and mane settling with each small movement, hard cut in, no dissolve, Hilltop wall: a dry-stone wall along the top of a grassy hill, one old pear tree leaning over it, the valley below, dusk after sunset, soft peach and lavender sky, low even light, peach, lavender, muted sage, soft grade, fine grain, cinema camera, 50mm, T2, locked off, ultra realistic, natural skin and coat texture, cinematic, no camera movement, no zoom, hard cut not a dissolve, no text",
+      "negatives": [
+        "no camera movement",
+        "no zoom",
+        "hard cut not a dissolve",
+        "no text"
+      ],
+      "refAssetIds": [
+        "ilse_present_full",
+        "fenna_present_full",
+        "loc_hill"
+      ],
+      "durationSec": 7,
+      "aspect": "16:9",
+      "audio": false,
+      "blocks": [
+        {
+          "name": "SHOT",
+          "text": "wide static, silhouette"
+        },
+        {
+          "name": "SUBJECT",
+          "text": "Ilse (present day, worn out) and Fenna (present day, very old)",
+          "locked": true
+        },
+        {
+          "name": "IDENTITY",
+          "text": "Ilse: a 71-year-old woman, 163 cm tall, 58 kg, narrow and upright, long white hair in one thick plait over her shoulder, pale grey-green eyes, a small white scar across her chin; mustard-yellow knitted cardigan with wooden toggle buttons, faded blue cotton headscarf, brass pocket knife on a green cord around her neck, wicker basket on her left arm; tired, hands red and chapped from the cold, mud on her boots and on the hem of the cardigan, the left pocket torn at one corner; Fenna: a dapple-grey pony mare, 27 years old, 142 cm at the withers, about 380 kg, a white star on her forehead, a dark mane, a small nick in her right ear; worn red leather halter with a brass nameplate, plaited blue wool browband; old and stiff but dignified, a sagging back, a cloudy left eye, a thin dull winter coat",
+          "locked": true
+        },
+        {
+          "name": "PERFORM",
+          "text": "two shapes by the pear tree, she holds out an apple slice, the mare takes it gently, natural micro-expressions, restrained"
+        },
+        {
+          "name": "PHYSICS",
+          "text": "straw and dust drifting through the light, wool and mane settling with each small movement"
+        },
+        {
+          "name": "MATCHCUT",
+          "text": "hard cut in, no dissolve"
+        },
+        {
+          "name": "LOCATION",
+          "text": "Hilltop wall: a dry-stone wall along the top of a grassy hill, one old pear tree leaning over it, the valley below",
+          "locked": true
+        },
+        {
+          "name": "LIGHT",
+          "text": "dusk after sunset, soft peach and lavender sky, low even light",
+          "locked": true
+        },
+        {
+          "name": "GRADE",
+          "text": "peach, lavender, muted sage, soft grade, fine grain"
+        },
+        {
+          "name": "CAMERA",
+          "text": "cinema camera, 50mm, T2, locked off"
+        },
+        {
+          "name": "QUALITY",
+          "text": "ultra realistic, natural skin and coat texture, cinematic"
+        },
+        {
+          "name": "NEGATIVES",
+          "text": "no camera movement, no zoom, hard cut not a dissolve, no text"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_d001",
+      "sceneId": "s4",
+      "tier": "draft",
+      "model": "bytedance/seedance-2.5/reference-to-video",
+      "resolution": "480p",
+      "file": {
+        "path": "{{MEDIA}}/orchard-ui/clips/s4_draft.mp4",
+        "durationSec": 8
+      },
+      "jobId": "job_c1",
+      "costUsd": 1.4,
+      "status": "done",
+      "approved": true,
+      "createdAt": "2026-10-10T18:00:00.000Z"
+    },
+    {
+      "id": "clip_d002",
+      "sceneId": "s1",
+      "tier": "draft",
+      "model": "bytedance/seedance-2.5/reference-to-video",
+      "resolution": "480p",
+      "file": {
+        "path": "{{MEDIA}}/orchard-ui/clips/s1_draft.mp4",
+        "durationSec": 6
+      },
+      "jobId": "job_c2",
+      "costUsd": 1.05,
+      "status": "done",
+      "approved": false,
+      "createdAt": "2026-10-10T18:00:00.000Z"
+    }
+  ],
+  "exports": [
+    {
+      "file": {
+        "path": "{{MEDIA}}/orchard-ui/export/fenna_1080p.mp4",
+        "durationSec": 14
+      },
+      "resolution": "1080p",
+      "sceneOrder": [
+        "s1",
+        "s4"
+      ],
+      "createdAt": "2026-10-10T18:00:00.000Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_scr",
+      "projectSlug": "orchard-ui",
+      "kind": "script",
+      "stage": "script",
+      "status": "done",
+      "startedAt": "2026-10-10T18:00:00.000Z",
+      "finishedAt": "2026-10-10T18:00:00.000Z",
+      "actualUsd": 0,
+      "outputs": [],
+      "log": [
+        "script saved"
+      ]
+    },
+    {
+      "id": "job_c1",
+      "projectSlug": "orchard-ui",
+      "kind": "clip",
+      "stage": "clips",
+      "status": "done",
+      "startedAt": "2026-10-10T18:00:00.000Z",
+      "finishedAt": "2026-10-10T18:00:00.000Z",
+      "estimateUsd": 1.4,
+      "actualUsd": 1.4,
+      "outputs": [],
+      "log": [
+        "estimate $1.40",
+        "downloaded 1 file"
+      ]
+    },
+    {
+      "id": "job_c2",
+      "projectSlug": "orchard-ui",
+      "kind": "clip",
+      "stage": "clips",
+      "status": "done",
+      "startedAt": "2026-10-10T18:00:00.000Z",
+      "finishedAt": "2026-10-10T18:00:00.000Z",
+      "estimateUsd": 1.05,
+      "actualUsd": 1.05,
+      "outputs": [],
+      "log": [
+        "estimate $1.05",
+        "downloaded 1 file"
+      ]
+    }
+  ],
+  "approvals": {
+    "brief": "2026-10-10T18:00:00.000Z",
+    "script": "2026-10-10T18:00:00.000Z",
+    "sheets": "2026-10-10T18:00:00.000Z"
+  },
+  "stamps": {
+    "brief": "2026-10-10T18:00:00.000Z",
+    "script": "2026-10-10T18:00:01.000Z",
+    "sheets": "2026-10-10T18:00:02.000Z",
+    "images": "2026-10-10T18:00:03.000Z",
+    "scenes": "2026-10-10T18:00:04.000Z",
+    "clips": "2026-10-10T18:00:05.000Z",
+    "export": "2026-10-10T18:00:06.000Z"
+  },
+  "style": {
+    "id": "anime-2d",
+    "name": "Anime 2D",
+    "family": "anime",
+    "description": "Hand-drawn 2D animation look with clean lines and flat cel colour.",
+    "look": "2D hand-drawn animation, flat cel shading, clean ink outlines, saturated painted backgrounds, soft bloom on highlights",
+    "sheetLook": "full-colour character turnaround on a plain pale background, flat cel colour, no cast shadow",
+    "negatives": [
+      "no photorealism",
+      "no 3D render",
+      "no film grain"
+    ],
+    "videoHints": "2D animation, limited animation, cel shading, held poses with small camera pushes",
+    "models": {
+      "faces": "alibaba/qwen-image-3/text-to-image",
+      "places": "alibaba/qwen-image-3/text-to-image",
+      "identity": "alibaba/qwen-image-3/edit"
+    },
+    "builtin": true
+  }
+}
