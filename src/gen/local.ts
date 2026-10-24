@@ -11,6 +11,7 @@ import { fileURLToPath } from 'node:url';
 import type { Emit } from '../types.ts';
 import { LOCAL_EDIT, LOCAL_QWEN, LOCAL_Z } from './models.ts';
 import { tinyPng } from '../demo/media.ts';
+import { findOnPath } from '../which.ts';
 
 /** Model slug -> the worker's VARIANTS name, its Hugging Face cache folder, and its default step count. */
 export const LOCAL_MODELS: Record<string, { worker: string; repo: string; hf?: string; steps: number; short: string; optional?: boolean;
@@ -45,9 +46,9 @@ export class LocalRunError extends Error {
 
 export interface LocalAvailability { ok: boolean; reason?: string; models: string[] }
 
-function onPath(bin: string): boolean {
-  return (process.env.PATH ?? '').split(path.delimiter).some((d) => { try { fs.accessSync(path.join(d, bin), fs.constants.X_OK); return true; } catch { return false; } });
-}
+/** What the availability check asks of the machine. Tests pass their own; nothing else changes it. */
+export interface LocalHost { platform: NodeJS.Platform; arch: string; onPath: (bin: string) => boolean; exists: (file: string) => boolean }
+export const realHost = (): LocalHost => ({ platform: process.platform, arch: process.arch, onPath: (bin) => findOnPath(bin) !== null, exists: (f) => fs.existsSync(f) });
 // Weights count only when fully downloaded: a snapshot with a transformer folder whose every file link resolves, and
 // no half-written blob left in the repo. A download in progress must never route work to a model that cannot load.
 function hasWeights(repo: string): boolean {
@@ -67,19 +68,19 @@ function hasWeights(repo: string): boolean {
   } catch { return false; }
 }
 
-function checkAvailable(): LocalAvailability {
+export function checkAvailable(host: LocalHost = realHost()): LocalAvailability {
   const models = Object.entries(LOCAL_MODELS).filter(([, m]) => hasWeights(m.repo)).map(([slug]) => slug);
   const why: string[] = [];
-  if (process.platform !== 'darwin' || process.arch !== 'arm64') why.push('local pictures need an Apple Silicon Mac (MLX)');
+  if (host.platform !== 'darwin' || host.arch !== 'arm64') why.push('local pictures need an Apple Silicon Mac (MLX)');
   const py = localPython();
-  if (py ? !(path.isAbsolute(py) ? fs.existsSync(py) : onPath(py)) : !onPath('uv')) why.push(py ? `HEARTCUT_LOCAL_PYTHON not found: ${py}` : 'uv is not installed (brew install uv), see tools/local-image.py');
-  if (!fs.existsSync(workerPath())) why.push(`worker missing: ${workerPath()}`);
+  if (py ? !(path.isAbsolute(py) ? host.exists(py) : host.onPath(py)) : !host.onPath('uv')) why.push(py ? `HEARTCUT_LOCAL_PYTHON not found: ${py}` : 'uv is not installed (brew install uv), see tools/local-image.py');
+  if (!host.exists(workerPath())) why.push(`worker missing: ${workerPath()}`);
   for (const [slug, m] of Object.entries(LOCAL_MODELS)) if (!models.includes(slug) && !m.optional) why.push(`${m.short} weights not in the Hugging Face cache (${m.repo})`);
   return why.length ? { ok: false, reason: why.join('; '), models: why.some((w) => /uv|worker|PYTHON|Apple Silicon/.test(w)) ? [] : models } : { ok: true, models };
 }
 
 /** Test seam: swap the availability check. */
-export const hooks = { available: checkAvailable };
+export const hooks = { available: (): LocalAvailability => checkAvailable() };
 export function isLocalAvailable(): LocalAvailability { return hooks.available(); }
 
 /** Stable seed from "<assetId>-v<n>" so a rerun reproduces the same picture. */

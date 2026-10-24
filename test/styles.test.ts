@@ -1,4 +1,5 @@
 // Styles: presets, user styles, prompt post-processing, per-model request bodies, images routing, API routes.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

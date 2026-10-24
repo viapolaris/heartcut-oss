@@ -1,5 +1,6 @@
 // {{char:id}} / {{loc:id}} are Heartcut's own sheet links. They stay in the stored text and never reach a picture or
 // video model as text: every input builder strips them, and the provider layer strips them again as a safety net.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

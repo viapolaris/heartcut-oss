@@ -1,3 +1,4 @@
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -47,13 +48,14 @@ test('a failing stage marks its job failed and rethrows', async () => {
   const p = store.createProject({ title: 'Boom', briefText: DEMO_BRIEF });
   p.script = { logline: '', emotionalCore: '', arc: '', characters: [], locations: [], scenes: [] };
   store.saveProject(p);
-  process.env.HEARTCUT_FAKE = '0'; // real path, forced to fail fast: no prompts dir entry for a bogus name is not reachable, so break PATH
-  const oldPath = process.env.PATH;
-  process.env.PATH = '/nonexistent';
+  // The real path, made to fail before any model is asked: an unknown provider name throws in src/llm/config.ts,
+  // so nothing is spawned or fetched whatever this machine has installed.
+  process.env.HEARTCUT_FAKE = '0';
+  process.env.HEARTCUT_LLM_PROVIDER = 'no-such-provider';
   try {
-    await assert.rejects(runStage('boom', 'sheets', {}, emit));
+    await assert.rejects(runStage('boom', 'sheets', {}, emit), /no-such-provider is not known/);
   } finally {
-    process.env.PATH = oldPath;
+    delete process.env.HEARTCUT_LLM_PROVIDER;
     process.env.HEARTCUT_FAKE = '1';
   }
   const j = store.loadProject('boom').jobs[0];

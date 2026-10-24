@@ -1,4 +1,5 @@
 // Dashboard server tests. Temp HEARTCUT_ROOT / HEARTCUT_MEDIA_ROOT must be set before store.ts loads.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -65,7 +66,7 @@ test('create, patch (deep-merge, arrays replaced), upload ref, get back', async 
 
 test('choose, approve clip, approve stage on the fixture project', async () => {
   const mediaRoot = process.env.HEARTCUT_MEDIA_ROOT!;
-  const text = JSON.stringify(fixture).replaceAll('{{MEDIA}}', mediaRoot);
+  const text = JSON.stringify(fixture).replaceAll('{{MEDIA}}', JSON.stringify(mediaRoot).slice(1, -1)); // escaped: a Windows path has backslashes
   const proj = JSON.parse(text);
   const dir = path.join(process.env.HEARTCUT_ROOT!, 'projects', proj.slug);
   fs.mkdirSync(dir, { recursive: true });

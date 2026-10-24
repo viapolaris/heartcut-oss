@@ -1,5 +1,6 @@
 // Clips stage (v5): source selection, prompt mode default + override, short fallback, one-take sequences, final rule,
 // export coverage of sequence clips.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

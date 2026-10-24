@@ -1,4 +1,5 @@
 // Anchor chaining: one face is locked first, every other picture of the character is built from it.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

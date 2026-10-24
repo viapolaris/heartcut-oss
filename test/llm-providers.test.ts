@@ -1,5 +1,6 @@
 // Provider layer: request shape per provider, images, structured-output fallback, retry rules, precedence.
 // No network: globalThis.fetch is replaced by a recorder for every test.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, beforeEach, afterEach } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

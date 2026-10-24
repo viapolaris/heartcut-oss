@@ -1,4 +1,5 @@
 // heartcut doctor, the media default, GET /api/doctor and POST /api/demo. Probes are injected; nothing real is called.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -129,7 +130,7 @@ test('cli: doctor exits 0 in fake mode, new --example names what exists when the
 
 test('cli: every example brief makes a project, titled from its heading', () => {
   const dir = path.join(REPO, 'examples');
-  const names = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md') && !/^readme/i.test(f)).map((f) => f.slice(0, -3)) : [];
+  const names = fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md') && !f.startsWith('.') && !/^readme/i.test(f)).map((f) => f.slice(0, -3)) : [];
   const env = { ...process.env, HEARTCUT_ROOT: path.join(tmp, 'ex'), HEARTCUT_MEDIA_ROOT: path.join(tmp, 'ex-media') };
   for (const name of names) {
     const r = spawnSync(process.execPath, ['src/cli.ts', 'new', `ex-${name}`, '--example', name], { cwd: REPO, env, encoding: 'utf8' });

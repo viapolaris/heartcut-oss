@@ -1,6 +1,7 @@
 // Generation provider layer: request shapes per provider and capability, polling, no resubmit after a timeout, the
 // spending cap and its reserve, provider selection precedence, keys never in /api/settings, local worker missing.
 // No network: globalThis.fetch is replaced by a router for every test.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, beforeEach, afterEach, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

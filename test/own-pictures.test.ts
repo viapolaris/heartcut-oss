@@ -1,4 +1,5 @@
 // v6.1 Your own pictures: use as final (sheet, scene with no keyframe), use as context (sheet, scene), make a clean sheet.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

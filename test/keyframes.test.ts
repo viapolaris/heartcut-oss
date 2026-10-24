@@ -1,4 +1,5 @@
 // Keyframes stage (v5): prompt join, placeholder -> refAssetIds, estimate counts, fake run, choose/remove.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

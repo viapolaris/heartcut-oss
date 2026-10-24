@@ -1,3 +1,4 @@
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
@@ -236,11 +237,20 @@ test('local availability: a half-downloaded model does not count until every blo
     else fs.symlinkSync(path.join(blobs, 'b1'), path.join(snap, 'w.safetensors')); // dangling until the blob lands
   };
   for (const m of Object.values(local.LOCAL_MODELS)) mk(m.repo, m.worker !== 'qwen_image_edit_2511');
-  local.hooks.available = orig;
+  // The machine is injected: an Apple Silicon Mac with uv and the worker, whatever this test runs on.
+  const mac: import('../src/gen/local.ts').LocalHost = { platform: 'darwin', arch: 'arm64', onPath: (b) => b === 'uv', exists: () => true };
   try {
-    const a = local.isLocalAvailable();
+    const a = local.checkAvailable(mac);
     assert.ok(!a.models.includes(models.LOCAL_EDIT), 'half-downloaded edit model is not available');
     assert.ok(a.models.includes(models.LOCAL_QWEN));
+    assert.equal(a.ok, true, a.reason ?? '');
+    const pc = local.checkAvailable({ ...mac, platform: 'linux', arch: 'x64' });
+    assert.equal(pc.ok, false);
+    assert.match(pc.reason!, /Apple Silicon/);
+    assert.deepEqual(pc.models, [], 'not on this computer: no model counts');
+    const noUv = local.checkAvailable({ ...mac, onPath: () => false });
+    assert.match(noUv.reason!, /uv is not installed/);
+    assert.deepEqual(noUv.models, []);
   } finally { delete process.env.HF_HUB_CACHE; }
 });
 

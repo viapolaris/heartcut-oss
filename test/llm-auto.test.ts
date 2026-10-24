@@ -1,6 +1,7 @@
 // Language model auto-pick: saved > env > auto, where auto = the claude command on PATH, else the first API key
 // (Anthropic, OpenAI, xAI, Gemini, OpenRouter), else a local Ollama / LM Studio that lists a model, else none.
 // PATH lookup and fetch are injected; nothing touches the network and no paid endpoint is ever asked.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, beforeEach } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';

@@ -1,3 +1,4 @@
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import type { Project, RefImage, Script } from '../src/types.ts';

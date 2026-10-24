@@ -68,6 +68,7 @@ Built-in looks live in `prompts/styles.json`. Each has an `id`, a `name`, a fami
 - One change per pull request. Keep it small.
 - All gates green. Say in the description that you ran them.
 - Add tests for new behaviour. No test may make a real network call or spend money.
+- No test may depend on the machine it runs on: OS, CPU, installed programs, your home folder, your `.env`. Start every test file with `import './fixtures/isolate.ts';` and inject the rest through the hooks in `src/` (for example `checkAvailable(host)` in `src/gen/local.ts`, `llmHooks.which` in `src/llm/config.ts`, `findOnPath(bin, env, platform)`).
 - Add optional fields only to shared types. Never rename or remove one.
 - If you change a JSON shape in `src/types.ts`, update the matching system prompt in the same change.
 - Update the docs your change touches.

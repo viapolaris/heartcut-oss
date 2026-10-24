@@ -1,4 +1,5 @@
 // Dashboard static assets: served, parse, and nothing external but the font link.
+import './fixtures/isolate.ts'; // first: cut this process off from the host machine
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
